@@ -1,17 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class Health : MonoBehaviour
 {
+    public UnityEvent OnHealthExpired;
+    
+    private float _HealthPoints = 100f;
 
-    public float HealthPoints = 100f;
-
-    private void Update()
+    public float HealthPoints
     {
-        if(HealthPoints <= 0f)
+        get { return _HealthPoints; }
+        set
         {
-            Destroy(gameObject);
+            _HealthPoints = value;
+
+            if (_HealthPoints <= 0)
+            {
+                OnHealthExpired.Invoke();
+            }
         }
     }
+    
 }
