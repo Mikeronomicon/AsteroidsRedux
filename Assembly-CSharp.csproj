@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PhysicsControls.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/miker/Desktop/Learning C#/AsteroidsRedux/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
